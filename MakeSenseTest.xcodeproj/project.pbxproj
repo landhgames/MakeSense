@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66042359203B2C0B00F6C089 /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = 66042358203B2C0B00F6C089 /* podfile */; };
 		665F3665203795B200D70CAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665F3664203795B200D70CAD /* AppDelegate.swift */; };
 		665F3667203795B200D70CAD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665F3666203795B200D70CAD /* MainViewController.swift */; };
 		665F366A203795B200D70CAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 665F3668203795B200D70CAD /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		66EBA5B7203A81BB00C90EE1 /* RichAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EBA5B5203A81BB00C90EE1 /* RichAddCell.swift */; };
 		66EBA5B8203A81BB00C90EE1 /* RichAddCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66EBA5B6203A81BB00C90EE1 /* RichAddCell.xib */; };
 		66FBC044203A032000F062AE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FBC043203A032000F062AE /* DetailViewController.swift */; };
+		EEEE86AE4402DA8CC84A1953 /* Pods_MakeSenseTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0393B9D2239D75081BFA3C7 /* Pods_MakeSenseTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		41F9003464D7691118FD1318 /* Pods-MakeSenseTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakeSenseTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MakeSenseTest/Pods-MakeSenseTest.debug.xcconfig"; sourceTree = "<group>"; };
+		66042358203B2C0B00F6C089 /* podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; };
 		665F3661203795B200D70CAD /* MakeSenseTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeSenseTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		665F3664203795B200D70CAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		665F3666203795B200D70CAD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 		66EBA5B5203A81BB00C90EE1 /* RichAddCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichAddCell.swift; sourceTree = "<group>"; };
 		66EBA5B6203A81BB00C90EE1 /* RichAddCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RichAddCell.xib; sourceTree = "<group>"; };
 		66FBC043203A032000F062AE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B0393B9D2239D75081BFA3C7 /* Pods_MakeSenseTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MakeSenseTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0F4E9912AC882BA79727EFC /* Pods-MakeSenseTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakeSenseTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-MakeSenseTest/Pods-MakeSenseTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEEE86AE4402DA8CC84A1953 /* Pods_MakeSenseTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,9 +102,12 @@
 		665F3658203795B200D70CAD = {
 			isa = PBXGroup;
 			children = (
+				66042358203B2C0B00F6C089 /* podfile */,
 				665F3663203795B200D70CAD /* MakeSenseTest */,
 				665F367B203795B200D70CAD /* MakeSenseTestTests */,
 				665F3662203795B200D70CAD /* Products */,
+				A48E14E7C0F5CABAB3594153 /* Pods */,
+				8254071B133DEFB4F3326DE3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -244,6 +254,23 @@
 			name = ViewController;
 			sourceTree = "<group>";
 		};
+		8254071B133DEFB4F3326DE3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B0393B9D2239D75081BFA3C7 /* Pods_MakeSenseTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A48E14E7C0F5CABAB3594153 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				41F9003464D7691118FD1318 /* Pods-MakeSenseTest.debug.xcconfig */,
+				F0F4E9912AC882BA79727EFC /* Pods-MakeSenseTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -251,9 +278,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 665F3681203795B200D70CAD /* Build configuration list for PBXNativeTarget "MakeSenseTest" */;
 			buildPhases = (
+				46B4C70CF1128439B7CFCA98 /* [CP] Check Pods Manifest.lock */,
 				665F365D203795B200D70CAD /* Sources */,
 				665F365E203795B200D70CAD /* Frameworks */,
 				665F365F203795B200D70CAD /* Resources */,
+				9E1954C1DD90B3C58B90219E /* [CP] Embed Pods Frameworks */,
+				AE81308AFC63B6D714F7651F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -330,6 +360,7 @@
 				667E8ACF203A945300A82E45 /* Info.plist in Resources */,
 				665F3672203795B200D70CAD /* LaunchScreen.storyboard in Resources */,
 				66EBA5AD203A733900C90EE1 /* SmallCell.xib in Resources */,
+				66042359203B2C0B00F6C089 /* podfile in Resources */,
 				665F366F203795B200D70CAD /* Assets.xcassets in Resources */,
 				66EBA5B8203A81BB00C90EE1 /* RichAddCell.xib in Resources */,
 				66EBA5A9203A69E900C90EE1 /* SpecialAddCell.xib in Resources */,
@@ -346,6 +377,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		46B4C70CF1128439B7CFCA98 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MakeSenseTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E1954C1DD90B3C58B90219E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MakeSenseTest/Pods-MakeSenseTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MakeSenseTest/Pods-MakeSenseTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE81308AFC63B6D714F7651F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MakeSenseTest/Pods-MakeSenseTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		665F365D203795B200D70CAD /* Sources */ = {
@@ -519,6 +604,7 @@
 		};
 		665F3682203795B200D70CAD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41F9003464D7691118FD1318 /* Pods-MakeSenseTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -534,6 +620,7 @@
 		};
 		665F3683203795B200D70CAD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0F4E9912AC882BA79727EFC /* Pods-MakeSenseTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
