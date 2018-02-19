@@ -10,7 +10,8 @@ import UIKit
 
 class MockNetworkService: NSObject {
 
-    static func getFeed() throws -> [Feed]{
+    // mock a async response
+    static func getFeed() throws -> [Feed] {
         var rv = [Feed]()
         
         let add = Feed.init(feedType: FeedType.SpecialAdd, title: nil, leftSubtitle: nil, rightSubtitle: nil, image: "coldbrew", description: nil, price:nil)

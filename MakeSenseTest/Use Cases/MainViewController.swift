@@ -44,7 +44,7 @@ class MainViewController: UIViewController {
         self.logInButton.alpha =        0
         self.alreadyHaveAccount.alpha = 0
         self.duracelImg.center = self.view.center
-        self.thePowerImg.center.y -= 15
+        self.thePowerImg.center.y -=    15
         self.toForgetImage.center.y -= 15
     }
     
@@ -84,10 +84,10 @@ class MainViewController: UIViewController {
     
     func startMessageAnimation(){
         UIView.animate(withDuration: 0.35, delay: 0, options: .curveEaseOut , animations: {
-            self.thePowerImg.center.y += 15
-            self.toForgetImage.center.y += 15            
-            self.thePowerImg.alpha = 1
-            self.toForgetImage.alpha = 1
+            self.thePowerImg.center.y +=    15
+            self.toForgetImage.center.y +=  15
+            self.thePowerImg.alpha =        1
+            self.toForgetImage.alpha =      1
         }, completion: { finished in
             self.showButtonAndLabels()
         })

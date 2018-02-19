@@ -49,7 +49,7 @@
 
 /* Begin PBXFileReference section */
 		41F9003464D7691118FD1318 /* Pods-MakeSenseTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakeSenseTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MakeSenseTest/Pods-MakeSenseTest.debug.xcconfig"; sourceTree = "<group>"; };
-		66042358203B2C0B00F6C089 /* podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; };
+		66042358203B2C0B00F6C089 /* podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		665F3661203795B200D70CAD /* MakeSenseTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeSenseTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		665F3664203795B200D70CAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		665F3666203795B200D70CAD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };

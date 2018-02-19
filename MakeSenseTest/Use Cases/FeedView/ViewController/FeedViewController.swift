@@ -15,7 +15,6 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var navigationTopConstraint: NSLayoutConstraint!    
     @IBOutlet weak var collectionView: UICollectionView!
     
-    
     fileprivate let feedViewPresenter = FeedViewPresenter(feedService: FeedService())
     fileprivate var feed = [Feed]()
     
@@ -87,19 +86,19 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let feed = self.feed[indexPath.row]
         
         if feed.feedType == .SmallAdd {
-            return CGSize(width: self.view.frame.size.width/2-10, height: 200);
+            return CGSize(width: self.view.frame.size.width/2-NumericConstants.SmallAddAdjustment.rawValue, height: NumericConstants.SmallAddHeight.rawValue);
         } else if feed.feedType == .SpecialAdd {
-            return CGSize(width: self.view.frame.size.width-25, height: self.view.frame.size.width-25);
+            return CGSize(width: self.view.frame.size.width-NumericConstants.SpecialAddAdjustment.rawValue, height: self.view.frame.size.width-NumericConstants.SpecialAddAdjustment.rawValue);
         } else if feed.feedType == .BannerAdd {
-            return CGSize(width: self.view.frame.size.width, height: 160);
+            return CGSize(width: self.view.frame.size.width, height: NumericConstants.BannerAddHeight.rawValue);
         } else {
-            return CGSize(width: self.view.frame.size.width, height: 300);
+            return CGSize(width: self.view.frame.size.width, height: NumericConstants.AddHeight.rawValue);
         }
         
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let feed = self.feed[indexPath.row]
+        let feed = self.feed[indexPath.row] 
     
         if feed.feedType == FeedType.SmallAdd || feed.feedType == FeedType.RichAdd {
             let detailViewController = storyboard?.instantiateViewController(withIdentifier: attributes.DetailViewController.rawValue) as! DetailViewController
@@ -120,7 +119,7 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
     // MARK: NavigationBar & Animations
 
     func shouldShowHeaderView(_ scrollView: UIScrollView) -> Bool {
-        if (scrollView.contentOffset.y < 320) {
+        if (scrollView.contentOffset.y < NumericConstants.ScrollViewBreakThrough.rawValue) {
             return true
         }
         return false
@@ -131,7 +130,7 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut , animations: {
             var navigationBarTopContraint = self.navigationTopConstraint.constant
             navigationBarTopContraint += 10
-            self.navigationTopConstraint.constant = min(navigationBarTopContraint,-20)
+            self.navigationTopConstraint.constant = min(navigationBarTopContraint,-self.navigationBarView.frame.size.height/3)
             self.view.layoutIfNeeded()            
         })
         
