@@ -25,10 +25,10 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangleBig" translatesAutoresizingMaskIntoConstraints="NO" id="OJ1-9r-CuE" userLabel="background">
-                        <rect key="frame" x="0.0" y="0.0" width="343" height="283"/>
+                        <rect key="frame" x="10" y="0.0" width="323" height="283"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eTZ-oQ-zkv">
-                        <rect key="frame" x="5" y="9" width="334" height="200"/>
+                        <rect key="frame" x="10" y="9" width="323" height="200"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="200" id="ebT-ep-T3b"/>
                         </constraints>
@@ -41,15 +41,15 @@
                     </label>
                 </subviews>
             </view>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="ysc-xz-Iqa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="28" id="56e-Oh-YB3"/>
-                <constraint firstItem="eTZ-oQ-zkv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="EgN-Mh-Qna"/>
-                <constraint firstItem="eTZ-oQ-zkv" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="KCW-ch-A61"/>
+                <constraint firstItem="eTZ-oQ-zkv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="EgN-Mh-Qna"/>
                 <constraint firstItem="OJ1-9r-CuE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="OWm-5U-rCE"/>
-                <constraint firstItem="OJ1-9r-CuE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="VJr-ER-Smn"/>
-                <constraint firstAttribute="trailing" secondItem="OJ1-9r-CuE" secondAttribute="trailing" id="Z0G-5G-Gac"/>
+                <constraint firstItem="OJ1-9r-CuE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="VJr-ER-Smn"/>
+                <constraint firstAttribute="trailing" secondItem="OJ1-9r-CuE" secondAttribute="trailing" constant="10" id="Z0G-5G-Gac"/>
                 <constraint firstAttribute="bottom" secondItem="ysc-xz-Iqa" secondAttribute="bottom" constant="8" id="fmU-tP-rMl"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="eTZ-oQ-zkv" secondAttribute="trailing" constant="10" id="g8P-zd-fsl"/>
                 <constraint firstItem="ysc-xz-Iqa" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="kzV-Yc-A6w"/>
                 <constraint firstItem="ysc-xz-Iqa" firstAttribute="top" secondItem="eTZ-oQ-zkv" secondAttribute="bottom" constant="7" id="oAG-sA-FJV"/>
                 <constraint firstAttribute="bottom" secondItem="OJ1-9r-CuE" secondAttribute="bottom" id="pEH-ud-5vg"/>

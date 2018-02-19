@@ -22,6 +22,12 @@ public enum attributes: String {
     case DetailViewController =   "DetailViewController"
 }
 
+public enum NumericConstants : Int {
+    case ScrollViewBreakThrough =  320
+}
+
+
+
 public enum FeedType {
     case SpecialAdd    
     case RichAdd

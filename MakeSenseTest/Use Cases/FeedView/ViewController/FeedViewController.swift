@@ -98,10 +98,6 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        return UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
-//    }
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let feed = self.feed[indexPath.row]
     
@@ -113,21 +109,19 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if shouldShowHeaderView(){
+        if shouldShowHeaderView(scrollView){
             showFloatingHeaderView()
         } else {
             hideFloatingHeaderView()
         }        
     }
     
+    
     // MARK: NavigationBar & Animations
 
-    func shouldShowHeaderView() -> Bool {
-        let indexes = self.collectionView.indexPathsForVisibleItems
-        for index in indexes {
-            if index.row == 0, index.section == 0 {
-                return true
-            }
+    func shouldShowHeaderView(_ scrollView: UIScrollView) -> Bool {
+        if (scrollView.contentOffset.y < 320) {
+            return true
         }
         return false
     }
