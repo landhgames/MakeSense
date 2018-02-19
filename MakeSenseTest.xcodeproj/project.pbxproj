@@ -8,12 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		665F3665203795B200D70CAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665F3664203795B200D70CAD /* AppDelegate.swift */; };
-		665F3667203795B200D70CAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665F3666203795B200D70CAD /* ViewController.swift */; };
+		665F3667203795B200D70CAD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665F3666203795B200D70CAD /* MainViewController.swift */; };
 		665F366A203795B200D70CAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 665F3668203795B200D70CAD /* Main.storyboard */; };
-		665F366D203795B200D70CAD /* MakeSenseTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 665F366B203795B200D70CAD /* MakeSenseTest.xcdatamodeld */; };
 		665F366F203795B200D70CAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 665F366E203795B200D70CAD /* Assets.xcassets */; };
 		665F3672203795B200D70CAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 665F3670203795B200D70CAD /* LaunchScreen.storyboard */; };
 		665F367D203795B200D70CAD /* MakeSenseTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665F367C203795B200D70CAD /* MakeSenseTestTests.swift */; };
+		665F368A203878BF00D70CAD /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665F3689203878BF00D70CAD /* FeedViewController.swift */; };
+		665F368F203881D400D70CAD /* FeedViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665F368E203881D400D70CAD /* FeedViewPresenter.swift */; };
+		665F36932038822300D70CAD /* FeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665F36922038822300D70CAD /* FeedService.swift */; };
+		665F36942038822300D70CAD /* FeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665F36922038822300D70CAD /* FeedService.swift */; };
+		665F36972039D6BB00D70CAD /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665F36962039D6BB00D70CAD /* Feed.swift */; };
+		665F369B2039D6F300D70CAD /* Defines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665F369A2039D6F300D70CAD /* Defines.swift */; };
+		665F369C2039D6F300D70CAD /* Defines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665F369A2039D6F300D70CAD /* Defines.swift */; };
+		667E8AC9203A939800A82E45 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665F36962039D6BB00D70CAD /* Feed.swift */; };
+		667E8ACF203A945300A82E45 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 667E8ACE203A945300A82E45 /* Info.plist */; };
+		66EBA5A2203A3A6900C90EE1 /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EBA5A1203A3A6900C90EE1 /* MockNetworkService.swift */; };
+		66EBA5A5203A46EE00C90EE1 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EBA5A4203A46EE00C90EE1 /* Utils.swift */; };
+		66EBA5A8203A69E900C90EE1 /* SpecialAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EBA5A6203A69E900C90EE1 /* SpecialAddCell.swift */; };
+		66EBA5A9203A69E900C90EE1 /* SpecialAddCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66EBA5A7203A69E900C90EE1 /* SpecialAddCell.xib */; };
+		66EBA5AC203A733900C90EE1 /* SmallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EBA5AA203A733900C90EE1 /* SmallCell.swift */; };
+		66EBA5AD203A733900C90EE1 /* SmallCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66EBA5AB203A733900C90EE1 /* SmallCell.xib */; };
+		66EBA5B3203A7DCC00C90EE1 /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EBA5B1203A7DCC00C90EE1 /* BannerCell.swift */; };
+		66EBA5B4203A7DCC00C90EE1 /* BannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66EBA5B2203A7DCC00C90EE1 /* BannerCell.xib */; };
+		66EBA5B7203A81BB00C90EE1 /* RichAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EBA5B5203A81BB00C90EE1 /* RichAddCell.swift */; };
+		66EBA5B8203A81BB00C90EE1 /* RichAddCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66EBA5B6203A81BB00C90EE1 /* RichAddCell.xib */; };
+		66FBC044203A032000F062AE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FBC043203A032000F062AE /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,15 +48,30 @@
 /* Begin PBXFileReference section */
 		665F3661203795B200D70CAD /* MakeSenseTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeSenseTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		665F3664203795B200D70CAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		665F3666203795B200D70CAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		665F3666203795B200D70CAD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		665F3669203795B200D70CAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		665F366C203795B200D70CAD /* MakeSenseTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MakeSenseTest.xcdatamodel; sourceTree = "<group>"; };
 		665F366E203795B200D70CAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		665F3671203795B200D70CAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		665F3673203795B200D70CAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		665F3678203795B200D70CAD /* MakeSenseTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MakeSenseTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		665F367C203795B200D70CAD /* MakeSenseTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeSenseTestTests.swift; sourceTree = "<group>"; };
 		665F367E203795B200D70CAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		665F3689203878BF00D70CAD /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		665F368E203881D400D70CAD /* FeedViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewPresenter.swift; sourceTree = "<group>"; };
+		665F36922038822300D70CAD /* FeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedService.swift; sourceTree = "<group>"; };
+		665F36962039D6BB00D70CAD /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		665F369A2039D6F300D70CAD /* Defines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defines.swift; sourceTree = "<group>"; };
+		667E8ACE203A945300A82E45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66EBA5A1203A3A6900C90EE1 /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MockNetworkService.swift; path = Services/MockNetworkService.swift; sourceTree = "<group>"; };
+		66EBA5A4203A46EE00C90EE1 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Services/Utils.swift; sourceTree = "<group>"; };
+		66EBA5A6203A69E900C90EE1 /* SpecialAddCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialAddCell.swift; sourceTree = "<group>"; };
+		66EBA5A7203A69E900C90EE1 /* SpecialAddCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpecialAddCell.xib; sourceTree = "<group>"; };
+		66EBA5AA203A733900C90EE1 /* SmallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCell.swift; sourceTree = "<group>"; };
+		66EBA5AB203A733900C90EE1 /* SmallCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SmallCell.xib; sourceTree = "<group>"; };
+		66EBA5B1203A7DCC00C90EE1 /* BannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
+		66EBA5B2203A7DCC00C90EE1 /* BannerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCell.xib; sourceTree = "<group>"; };
+		66EBA5B5203A81BB00C90EE1 /* RichAddCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichAddCell.swift; sourceTree = "<group>"; };
+		66EBA5B6203A81BB00C90EE1 /* RichAddCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RichAddCell.xib; sourceTree = "<group>"; };
+		66FBC043203A032000F062AE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,12 +114,13 @@
 			isa = PBXGroup;
 			children = (
 				665F3664203795B200D70CAD /* AppDelegate.swift */,
-				665F3666203795B200D70CAD /* ViewController.swift */,
-				665F3668203795B200D70CAD /* Main.storyboard */,
-				665F366E203795B200D70CAD /* Assets.xcassets */,
-				665F3670203795B200D70CAD /* LaunchScreen.storyboard */,
-				665F3673203795B200D70CAD /* Info.plist */,
-				665F366B203795B200D70CAD /* MakeSenseTest.xcdatamodeld */,
+				665F369A2039D6F300D70CAD /* Defines.swift */,
+				66EBA5A0203A3A5100C90EE1 /* Services */,
+				665F36992039D6C400D70CAD /* Models */,
+				665F36A02039F1D800D70CAD /* Views */,
+				665F368B2038807D00D70CAD /* Use Cases */,
+				667E8ACE203A945300A82E45 /* Info.plist */,
+				66EBA5A3203A3AF100C90EE1 /* Resources */,
 			);
 			path = MakeSenseTest;
 			sourceTree = "<group>";
@@ -97,6 +132,116 @@
 				665F367E203795B200D70CAD /* Info.plist */,
 			);
 			path = MakeSenseTestTests;
+			sourceTree = "<group>";
+		};
+		665F368B2038807D00D70CAD /* Use Cases */ = {
+			isa = PBXGroup;
+			children = (
+				66FBC042203A030400F062AE /* MainView */,
+				665F368C203880EE00D70CAD /* FeedView */,
+				66FBC045203A032300F062AE /* DetailView */,
+			);
+			path = "Use Cases";
+			sourceTree = "<group>";
+		};
+		665F368C203880EE00D70CAD /* FeedView */ = {
+			isa = PBXGroup;
+			children = (
+				665F368D203881AF00D70CAD /* ViewController */,
+				665F36952038822800D70CAD /* Service */,
+				665F3691203881D800D70CAD /* Presenter */,
+			);
+			path = FeedView;
+			sourceTree = "<group>";
+		};
+		665F368D203881AF00D70CAD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				665F3689203878BF00D70CAD /* FeedViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		665F3691203881D800D70CAD /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				665F368E203881D400D70CAD /* FeedViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		665F36952038822800D70CAD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				665F36922038822300D70CAD /* FeedService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		665F36992039D6C400D70CAD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				665F36962039D6BB00D70CAD /* Feed.swift */,
+				66EBA5A6203A69E900C90EE1 /* SpecialAddCell.swift */,
+				66EBA5AA203A733900C90EE1 /* SmallCell.swift */,
+				66EBA5B1203A7DCC00C90EE1 /* BannerCell.swift */,
+				66EBA5B5203A81BB00C90EE1 /* RichAddCell.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		665F36A02039F1D800D70CAD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				665F3668203795B200D70CAD /* Main.storyboard */,
+				66EBA5A7203A69E900C90EE1 /* SpecialAddCell.xib */,
+				66EBA5AB203A733900C90EE1 /* SmallCell.xib */,
+				66EBA5B2203A7DCC00C90EE1 /* BannerCell.xib */,
+				66EBA5B6203A81BB00C90EE1 /* RichAddCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		66EBA5A0203A3A5100C90EE1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				66EBA5A1203A3A6900C90EE1 /* MockNetworkService.swift */,
+				66EBA5A4203A46EE00C90EE1 /* Utils.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		66EBA5A3203A3AF100C90EE1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				665F366E203795B200D70CAD /* Assets.xcassets */,
+				665F3670203795B200D70CAD /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		66FBC042203A030400F062AE /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				665F3666203795B200D70CAD /* MainViewController.swift */,
+			);
+			name = MainView;
+			sourceTree = "<group>";
+		};
+		66FBC045203A032300F062AE /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				66FBC046203A036400F062AE /* ViewController */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
+		66FBC046203A036400F062AE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				66FBC043203A032000F062AE /* DetailViewController.swift */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,9 +327,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				667E8ACF203A945300A82E45 /* Info.plist in Resources */,
 				665F3672203795B200D70CAD /* LaunchScreen.storyboard in Resources */,
+				66EBA5AD203A733900C90EE1 /* SmallCell.xib in Resources */,
 				665F366F203795B200D70CAD /* Assets.xcassets in Resources */,
+				66EBA5B8203A81BB00C90EE1 /* RichAddCell.xib in Resources */,
+				66EBA5A9203A69E900C90EE1 /* SpecialAddCell.xib in Resources */,
 				665F366A203795B200D70CAD /* Main.storyboard in Resources */,
+				66EBA5B4203A7DCC00C90EE1 /* BannerCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,9 +352,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				665F3667203795B200D70CAD /* ViewController.swift in Sources */,
-				665F366D203795B200D70CAD /* MakeSenseTest.xcdatamodeld in Sources */,
+				66FBC044203A032000F062AE /* DetailViewController.swift in Sources */,
+				665F3667203795B200D70CAD /* MainViewController.swift in Sources */,
+				665F36972039D6BB00D70CAD /* Feed.swift in Sources */,
+				66EBA5B7203A81BB00C90EE1 /* RichAddCell.swift in Sources */,
+				66EBA5A5203A46EE00C90EE1 /* Utils.swift in Sources */,
+				66EBA5A8203A69E900C90EE1 /* SpecialAddCell.swift in Sources */,
+				66EBA5A2203A3A6900C90EE1 /* MockNetworkService.swift in Sources */,
+				665F36932038822300D70CAD /* FeedService.swift in Sources */,
+				665F368A203878BF00D70CAD /* FeedViewController.swift in Sources */,
+				665F369B2039D6F300D70CAD /* Defines.swift in Sources */,
 				665F3665203795B200D70CAD /* AppDelegate.swift in Sources */,
+				66EBA5AC203A733900C90EE1 /* SmallCell.swift in Sources */,
+				665F368F203881D400D70CAD /* FeedViewPresenter.swift in Sources */,
+				66EBA5B3203A7DCC00C90EE1 /* BannerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +374,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				665F367D203795B200D70CAD /* MakeSenseTestTests.swift in Sources */,
+				667E8AC9203A939800A82E45 /* Feed.swift in Sources */,
+				665F36942038822300D70CAD /* FeedService.swift in Sources */,
+				665F369C2039D6F300D70CAD /* Defines.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +522,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MakeSenseTest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MakeSenseTestTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MakeSense.MakeSenseTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -372,7 +537,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MakeSenseTest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MakeSenseTestTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MakeSense.MakeSenseTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -444,19 +610,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		665F366B203795B200D70CAD /* MakeSenseTest.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				665F366C203795B200D70CAD /* MakeSenseTest.xcdatamodel */,
-			);
-			currentVersion = 665F366C203795B200D70CAD /* MakeSenseTest.xcdatamodel */;
-			path = MakeSenseTest.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 665F3659203795B200D70CAD /* Project object */;
 }

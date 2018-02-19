@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Helvetica.ttc">
+            <string>Helvetica</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SmallCell" id="gTV-IL-0wX" customClass="SmallCell" customModule="MakeSenseTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="170" height="210"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="170" height="210"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_square" translatesAutoresizingMaskIntoConstraints="NO" id="ejQ-Vg-UAe">
+                        <rect key="frame" x="0.0" y="0.0" width="170" height="210"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RBP-Rm-K0O">
+                        <rect key="frame" x="20" y="10" width="130" height="130"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="130" id="A8A-AQ-2q0"/>
+                            <constraint firstAttribute="height" constant="130" id="OGF-vB-Ujc"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keyscaper Emblematic iPhone 6 Clear Case" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pg1-ll-zuN">
+                        <rect key="frame" x="10" y="150" width="151" height="51"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="51" id="ShJ-mY-fwu"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ejQ-Vg-UAe" secondAttribute="trailing" id="4nB-9Q-ZSZ"/>
+                <constraint firstItem="Pg1-ll-zuN" firstAttribute="top" secondItem="RBP-Rm-K0O" secondAttribute="bottom" constant="10" id="7Sg-Xp-Nll"/>
+                <constraint firstItem="RBP-Rm-K0O" firstAttribute="centerX" secondItem="Pg1-ll-zuN" secondAttribute="centerX" id="BIz-Vn-2Fc"/>
+                <constraint firstAttribute="trailing" secondItem="Pg1-ll-zuN" secondAttribute="trailing" constant="9" id="FRQ-aK-0W7"/>
+                <constraint firstItem="ejQ-Vg-UAe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ICK-nI-MMJ"/>
+                <constraint firstItem="ejQ-Vg-UAe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="SQp-L5-Vnn"/>
+                <constraint firstItem="RBP-Rm-K0O" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="U5j-fp-aOc"/>
+                <constraint firstAttribute="bottom" secondItem="ejQ-Vg-UAe" secondAttribute="bottom" id="WTQ-DA-3FA"/>
+                <constraint firstAttribute="bottom" secondItem="Pg1-ll-zuN" secondAttribute="bottom" constant="9" id="c6t-Gq-Whh"/>
+                <constraint firstItem="RBP-Rm-K0O" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" constant="10" id="dFH-CS-3tX"/>
+                <constraint firstItem="RBP-Rm-K0O" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="iuQ-ST-7kk"/>
+                <constraint firstAttribute="trailing" secondItem="RBP-Rm-K0O" secondAttribute="trailing" constant="20" id="tsG-Aq-m4o"/>
+                <constraint firstItem="Pg1-ll-zuN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="xEs-hv-og4"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="170" height="210"/>
+            <connections>
+                <outlet property="addImage" destination="RBP-Rm-K0O" id="2Rn-av-J09"/>
+                <outlet property="titleLabel" destination="Pg1-ll-zuN" id="g5I-ng-CV1"/>
+            </connections>
+            <point key="canvasLocation" x="94" y="134"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="background_square" width="172" height="202"/>
+    </resources>
+</document>
