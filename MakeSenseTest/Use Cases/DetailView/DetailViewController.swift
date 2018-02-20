@@ -28,22 +28,25 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
         updateUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        startViewAnimation(titleBottomPosition: 242, listBottomPosition: 12)
-    }        
+        setupUI(titleBottomPosition: -200, bottomConstraintPosition: -50)
+    }
     
-    func setupUI() {
+    override func viewDidAppear(_ animated: Bool) {
+        startViewAnimation(titleBottomPosition: 242, listBottomPosition: 12, scale : 1.5)
+    }
+    
+    func setupUI(titleBottomPosition : CGFloat, bottomConstraintPosition : CGFloat) {
         wishListIcon.alpha = 0
         closeButton.alpha = 0
         moreButton.alpha =  0
         
-        titleBottomConstraint.constant = 0
-        addedWishListBottomConstraint.constant = -50
+        titleBottomConstraint.constant = titleBottomPosition
+        addedWishListBottomConstraint.constant = bottomConstraintPosition
         self.view.layoutIfNeeded()
     }
     
@@ -66,18 +69,17 @@ class DetailViewController: UIViewController {
     
     // MARK: Animations
 
-    func startViewAnimation(titleBottomPosition: CGFloat, listBottomPosition : CGFloat) {
+    func startViewAnimation(titleBottomPosition: CGFloat, listBottomPosition : CGFloat, scale : CGFloat) {
         self.titleBottomConstraint.constant = titleBottomPosition
         self.addedWishListBottomConstraint.constant = listBottomPosition
         
-        UIView.animate(withDuration: 0.5, delay:0, options: .curveLinear , animations: {            
+        UIView.animate(withDuration: 0.5, delay:0, options: .curveLinear , animations: {
             self.view.layoutIfNeeded()
             self.closeButton.alpha =  1.0
             self.moreButton.alpha  =  1.0
-            self.itemImage.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+            self.itemImage.transform = CGAffineTransform(scaleX: scale, y: scale)
         })
     }
-    
     
     // MARK: IBActions
     
