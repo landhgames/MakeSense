@@ -16,15 +16,12 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var descriptionLabel:    UILabel!
     @IBOutlet weak var addToWishListButton: UIButton!
     @IBOutlet weak var buyOnlinebutton:     UIButton!
-    @IBOutlet weak var separatorView:       UIView!
     @IBOutlet weak var itemImage:           UIImageView!
     @IBOutlet weak var wishListIcon:        UIButton!
     @IBOutlet weak var closeButton:         UIButton!
     @IBOutlet weak var moreButton:          UIButton!
     
-    @IBOutlet weak var titleBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var addedWishListBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var buyButtomBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var viewTopContraint: NSLayoutConstraint!
     
     var feed : Feed?
     
@@ -35,21 +32,19 @@ class DetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setupUI(titleBottomPosition: -500, bottomConstraintPosition: -100)
+        setupUI(viewInitialPosition: 0)
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        startViewAnimation(titleBottomPosition: 242, listBottomPosition: 12, scale : 1.5)
+        startViewAnimation(titleBottomPosition: -300, listBottomPosition: 12, scale : 1.5)
     }
     
-    func setupUI(titleBottomPosition : CGFloat, bottomConstraintPosition : CGFloat) {
+    func setupUI(viewInitialPosition : CGFloat) {
         wishListIcon.alpha = 0
         closeButton.alpha = 0
         moreButton.alpha =  0
         
-        titleBottomConstraint.constant = titleBottomPosition
-        addedWishListBottomConstraint.constant = bottomConstraintPosition
-        buyButtomBottomConstraint.constant = titleBottomPosition
+        viewTopContraint.constant = viewInitialPosition
         self.view.layoutIfNeeded()
     }
     
@@ -83,9 +78,7 @@ class DetailViewController: UIViewController {
     // MARK: Animations
 
     func startViewAnimation(titleBottomPosition: CGFloat, listBottomPosition : CGFloat, scale : CGFloat) {
-        self.titleBottomConstraint.constant = titleBottomPosition
-        self.buyButtomBottomConstraint.constant = titleBottomPosition
-        self.addedWishListBottomConstraint.constant = listBottomPosition
+        self.viewTopContraint.constant = titleBottomPosition
         
         UIView.animate(withDuration: 0.4, delay:0, options: .curveLinear , animations: {
             self.view.layoutIfNeeded()
