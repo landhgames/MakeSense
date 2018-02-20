@@ -24,11 +24,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="533" height="147"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yma-sz-MFk">
-                        <rect key="frame" x="0.0" y="-1" width="513" height="148"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yma-sz-MFk">
+                        <rect key="frame" x="0.0" y="-1" width="533" height="148"/>
                     </imageView>
-                    <view opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xq2-1q-hCB" userLabel="OpaqueView">
-                        <rect key="frame" x="0.0" y="0.0" width="490" height="147"/>
+                    <view opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xq2-1q-hCB" userLabel="OpaqueView">
+                        <rect key="frame" x="0.0" y="0.0" width="533" height="147"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 Ways to Stayc Active This Summer" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwG-Fs-b47">
