@@ -28,15 +28,14 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupUI()
+        updateUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setupUI()
-        startViewAnimation()
-        updateUI()
-    }
+        startViewAnimation(titleBottomPosition: 242, listBottomPosition: 12)
+    }        
     
     func setupUI() {
         wishListIcon.alpha = 0
@@ -67,11 +66,11 @@ class DetailViewController: UIViewController {
     
     // MARK: Animations
 
-    func startViewAnimation() {
-        titleBottomConstraint.constant = 242
-        addedWishListBottomConstraint.constant = 12
+    func startViewAnimation(titleBottomPosition: CGFloat, listBottomPosition : CGFloat) {
+        self.titleBottomConstraint.constant = titleBottomPosition
+        self.addedWishListBottomConstraint.constant = listBottomPosition
         
-        UIView.animate(withDuration: 0.5, delay:0, options: .curveLinear , animations: {
+        UIView.animate(withDuration: 0.5, delay:0, options: .curveLinear , animations: {            
             self.view.layoutIfNeeded()
             self.closeButton.alpha =  1.0
             self.moreButton.alpha  =  1.0

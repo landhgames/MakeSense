@@ -38,15 +38,8 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
         collectionView.register(richCellNib, forCellWithReuseIdentifier: attributes.richAddCell.rawValue)
 
         feedViewPresenter.attachView(self)
-        
-        do {
-            try feedViewPresenter.getFeeds()
-        } catch {
-            Utils.showErrorWithMsg(Constants.errorLoadUsers, viewController: self)
-        }
+        feedViewPresenter.getFeeds()
     }
-    
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -122,7 +115,6 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
         }        
     }
     
-    
     // MARK: NavigationBar & Animations
 
     func shouldShowHeaderView(_ scrollView: UIScrollView) -> Bool {
@@ -172,6 +164,10 @@ extension FeedViewController: UserView {
         self.feed = feeds
         self.collectionView.reloadData()
         self.stopSpinner()
+    }
+    
+    func showError(_ error : Error) {
+        Utils.showErrorWithMsg(Constants.errorLoadUsers, viewController: self)
     }
 }
 

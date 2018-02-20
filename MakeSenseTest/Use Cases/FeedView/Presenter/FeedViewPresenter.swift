@@ -9,7 +9,7 @@
 import UIKit
 
 class FeedViewPresenter  {
-
+    
     fileprivate let feedService: FeedService
     weak fileprivate var userView : UserView?
     
@@ -25,21 +25,16 @@ class FeedViewPresenter  {
         userView = nil
     }
     
-    func getFeeds() throws {
-        do{
-            try feedService.getFeeds() { (resultFeed, error) in
-                
-                if let error = error {
-                    //throw error
-                } else {
-                    if let result = resultFeed {
-                        self.userView?.setFeed(result.feed)
-                    }
+    func getFeeds() {
+        feedService.getFeeds() { (resultFeed, error) in
+            
+            if let error = error {
+                self.userView?.showError(error)
+            } else {
+                if let result = resultFeed {
+                    self.userView?.setFeed(result.feed)
                 }
             }
-            
-        }catch{
-            throw error
         }
     }
     

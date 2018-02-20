@@ -10,24 +10,15 @@ import UIKit
 
 class FeedService: NSObject {
     
-    func getFeeds(completionHandler completion: @escaping (ResultFeed?,NSError?) -> Void) throws -> Void {
-        
-        do {
-            NetworkService.getFeedRequest(getFeedUrl:Urls.getFeedUrl.rawValue) { (json, error) in
-                if (json != nil) {
-                    let responseFeed = ResultFeed.create(json: json!)
-                    completion(responseFeed, nil)
-                }
-                else {
-                    completion(nil, error)
-                }
+    func getFeeds(completionHandler completion: @escaping (ResultFeed?,NSError?) -> Void) -> Void {
+        NetworkService.getFeedRequest(getFeedUrl:Urls.getFeedUrl.rawValue) { (json, error) in
+            if (json != nil) {
+                let responseFeed = ResultFeed.create(json: json!)
+                completion(responseFeed, nil)
             }
-            //let result = try MockNetworkService.getFeed()
-            
-        }catch{
-            print("Error retrieving feeds")
-            throw error
-        }        
+            else {
+                completion(nil, error)
+            }
+        }
     }
-
 }

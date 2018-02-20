@@ -31,8 +31,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="avq-Ow-zdM">
-                                <rect key="frame" x="16" y="86" width="359" height="581"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="avq-Ow-zdM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_duracell" translatesAutoresizingMaskIntoConstraints="NO" id="qBi-1x-QU1">
                                 <rect key="frame" x="137.5" y="270" width="100" height="100"/>
@@ -76,7 +76,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="duracelLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Zct-Mb-sA0">
-                                <rect key="frame" x="67" y="316" width="240" height="35"/>
+                                <rect key="frame" x="75" y="316" width="240" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="03V-d4-AuI"/>
                                     <constraint firstAttribute="height" constant="35" id="dWF-VQ-kR4"/>
@@ -87,17 +87,17 @@
                         <constraints>
                             <constraint firstItem="avq-Ow-zdM" firstAttribute="bottom" secondItem="aWT-hf-1eL" secondAttribute="top" id="0ST-ga-f3F"/>
                             <constraint firstItem="exe-jM-vdj" firstAttribute="leading" secondItem="F7f-1h-ATj" secondAttribute="leading" id="1yI-BD-Xcg"/>
+                            <constraint firstItem="Zct-Mb-sA0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="75" id="2V3-qq-smC"/>
                             <constraint firstItem="avq-Ow-zdM" firstAttribute="centerX" secondItem="CaF-eU-VWI" secondAttribute="centerX" id="7lU-31-mD1"/>
                             <constraint firstAttribute="trailing" secondItem="avq-Ow-zdM" secondAttribute="trailing" id="Cxu-P5-Ob2"/>
-                            <constraint firstItem="qBi-1x-QU1" firstAttribute="centerX" secondItem="avq-Ow-zdM" secondAttribute="centerX" id="D0V-6B-qfj"/>
                             <constraint firstItem="CaF-eU-VWI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="Eel-tx-s1G"/>
                             <constraint firstAttribute="trailingMargin" secondItem="F7f-1h-ATj" secondAttribute="trailing" constant="88" id="Kk0-4g-hfG"/>
+                            <constraint firstItem="qBi-1x-QU1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="137.5" id="MOI-kw-FOg"/>
                             <constraint firstItem="avq-Ow-zdM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="P7X-fN-586"/>
                             <constraint firstItem="dXL-Ku-1lk" firstAttribute="centerX" secondItem="avq-Ow-zdM" secondAttribute="centerX" id="Pwe-Ne-kjB"/>
                             <constraint firstAttribute="bottomMargin" secondItem="dXL-Ku-1lk" secondAttribute="bottom" constant="10" id="QeV-2B-at9"/>
-                            <constraint firstItem="Zct-Mb-sA0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e9Q-hW-Hee"/>
+                            <constraint firstItem="Zct-Mb-sA0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="316" id="aT5-yE-9H2"/>
                             <constraint firstItem="dXL-Ku-1lk" firstAttribute="top" secondItem="CaF-eU-VWI" secondAttribute="bottom" constant="25" id="gcM-3m-mSP"/>
-                            <constraint firstItem="Zct-Mb-sA0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kOD-LW-Ael"/>
                             <constraint firstItem="exe-jM-vdj" firstAttribute="top" secondItem="W62-J3-H6u" secondAttribute="bottom" constant="100" id="kdy-ov-lY0"/>
                             <constraint firstItem="avq-Ow-zdM" firstAttribute="top" secondItem="qBi-1x-QU1" secondAttribute="bottom" constant="-370" id="rQ0-94-wbC"/>
                             <constraint firstItem="F7f-1h-ATj" firstAttribute="top" secondItem="exe-jM-vdj" secondAttribute="bottom" constant="10" id="sek-a7-cXe"/>
@@ -110,8 +110,8 @@
                         <outlet property="duracelImageConstraint" destination="rQ0-94-wbC" id="kLF-3h-mpy"/>
                         <outlet property="duracelImg" destination="qBi-1x-QU1" id="fA9-li-Iuf"/>
                         <outlet property="duracelLogoImg" destination="Zct-Mb-sA0" id="DEk-1D-j1k"/>
-                        <outlet property="duracelSignLeftConstraint" destination="e9Q-hW-Hee" id="68X-Cn-ehb"/>
-                        <outlet property="duracelSignTopConstraint" destination="kOD-LW-Ael" id="uHw-GP-Yvy"/>
+                        <outlet property="duracelSignLeftConstraint" destination="2V3-qq-smC" id="a3w-tJ-tuE"/>
+                        <outlet property="duracelSignTopConstraint" destination="aT5-yE-9H2" id="KaJ-tz-dWx"/>
                         <outlet property="getStartedButton" destination="CaF-eU-VWI" id="biO-GX-QVC"/>
                         <outlet property="logInButton" destination="TBF-pm-StV" id="5zV-WF-ZM0"/>
                         <outlet property="thePowerImg" destination="exe-jM-vdj" id="mo3-p6-HB6"/>
@@ -303,6 +303,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="fg1-am-ZYy" firstAttribute="top" secondItem="DxA-mZ-4mG" secondAttribute="bottom" constant="8" symbolic="YES" id="0cY-fP-ULK"/>
+                            <constraint firstItem="ZuG-NV-9Wx" firstAttribute="top" secondItem="fg1-am-ZYy" secondAttribute="bottom" constant="25" id="3fA-qL-wiI"/>
                             <constraint firstItem="azr-Oj-xgu" firstAttribute="top" secondItem="ibw-o3-6vM" secondAttribute="bottom" constant="65" id="8Rd-pT-71o"/>
                             <constraint firstItem="1dK-vZ-lC3" firstAttribute="leading" secondItem="DxA-mZ-4mG" secondAttribute="leading" id="BiC-oH-ncb"/>
                             <constraint firstItem="ZuG-NV-9Wx" firstAttribute="leading" secondItem="Lct-4y-GXS" secondAttribute="leadingMargin" constant="10" id="CGv-QU-rwn"/>
@@ -322,6 +323,7 @@
                             <constraint firstItem="DxA-mZ-4mG" firstAttribute="leading" secondItem="fg1-am-ZYy" secondAttribute="leading" id="qXY-6b-6bJ"/>
                             <constraint firstAttribute="trailing" secondItem="fg1-am-ZYy" secondAttribute="trailing" constant="24" id="rVl-rC-wzA"/>
                             <constraint firstAttribute="trailing" secondItem="lRG-Ek-cwN" secondAttribute="trailing" id="rXD-Q6-92e"/>
+                            <constraint firstItem="1dK-vZ-lC3" firstAttribute="top" secondItem="ibw-o3-6vM" secondAttribute="bottom" constant="315" id="tVK-gA-bLG"/>
                             <constraint firstItem="lRG-Ek-cwN" firstAttribute="leading" secondItem="Lct-4y-GXS" secondAttribute="leading" id="v9O-Wd-MTS"/>
                             <constraint firstItem="bBO-AA-Yvc" firstAttribute="top" secondItem="ZuG-NV-9Wx" secondAttribute="bottom" constant="12" id="vc0-Tb-q7B"/>
                             <constraint firstItem="ibw-o3-6vM" firstAttribute="top" secondItem="Em5-qr-a1a" secondAttribute="top" id="vpv-zp-We5"/>
@@ -335,7 +337,6 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addToWishListButton" destination="ZuG-NV-9Wx" id="Z72-i0-7fb"/>
-                        <outlet property="addedWishListBottomConstraint" destination="vc0-Tb-q7B" id="0tl-67-TrD"/>
                         <outlet property="buyOnlinebutton" destination="j3n-12-tkQ" id="oLt-KL-BEx"/>
                         <outlet property="closeButton" destination="ibw-o3-6vM" id="n6P-3L-5A5"/>
                         <outlet property="descriptionLabel" destination="fg1-am-ZYy" id="sqi-9H-tqc"/>
@@ -343,8 +344,8 @@
                         <outlet property="moreButton" destination="lrW-BB-bYx" id="MM8-1N-zhk"/>
                         <outlet property="priceLabel" destination="DxA-mZ-4mG" id="ecx-d6-PXb"/>
                         <outlet property="separatorView" destination="XHE-dC-tUp" id="Sbu-zv-q5U"/>
-                        <outlet property="titleBottomConstraint" destination="TjC-Pi-tsL" id="gHL-fN-2m8"/>
                         <outlet property="titleLabel" destination="1dK-vZ-lC3" id="z6P-X4-ZNY"/>
+                        <outlet property="titleTopConstraint" destination="tVK-gA-bLG" id="xrT-Lu-WEO"/>
                         <outlet property="wishListIcon" destination="Em5-qr-a1a" id="Ux3-XW-mX1"/>
                     </connections>
                 </viewController>
