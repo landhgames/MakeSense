@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class DetailViewController: UIViewController {
 
@@ -56,7 +57,17 @@ class DetailViewController: UIViewController {
         if let feed = self.feed {
             titleLabel.text = feed.title
             priceLabel.text = feed.price
-            itemImage.image = UIImage.init(named: feed.image)
+            
+            let activityIndicator = UIActivityIndicatorView.init(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
+            activityIndicator.center = itemImage.center
+            activityIndicator.hidesWhenStopped = true
+            
+            itemImage.addSubview(activityIndicator)
+            activityIndicator.startAnimating()
+            
+            itemImage.sd_setImage(with: URL(string: feed.image), completed: { (image: UIImage?, error: Error?, cacheType: SDImageCacheType, imageURL: URL?) in
+                activityIndicator.removeFromSuperview()
+            })            
         }
     }
 

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class SmallCell: UICollectionViewCell {
 
@@ -18,7 +19,17 @@ class SmallCell: UICollectionViewCell {
     }
     
     func configureCell(_ feed : Feed) {
-        self.addImage.image = UIImage.init(named: feed.image)
+        let activityIndicator = UIActivityIndicatorView.init(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
+        activityIndicator.center = addImage.center
+        activityIndicator.hidesWhenStopped = true
+        
+        addImage.sd_setImage(with: URL(string: feed.image), completed: { (image: UIImage?, error: Error?, cacheType: SDImageCacheType, imageURL: URL?) in
+            activityIndicator.removeFromSuperview()
+        })
+        
+        addImage.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+        
         self.titleLabel.text = feed.title
     }
 

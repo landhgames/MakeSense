@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SpinKit
 
 class FeedViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -18,12 +17,10 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     fileprivate let feedViewPresenter = FeedViewPresenter(feedService: FeedService())
     fileprivate var feed = [Feed]()
-    var spinner : RTSpinKitView?
     let transition = MakeSenseAnimationTransition()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        startSpinner()
         
         let nibName = UINib(nibName: attributes.specialAddCell.rawValue, bundle:nil)
         collectionView.register(nibName, forCellWithReuseIdentifier: attributes.specialAddCell.rawValue)
@@ -143,27 +140,12 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
             self.view.layoutIfNeeded()
         })
     }
-    
-    // Spinner
-    
-    func startSpinner() {
-        let spinner = RTSpinKitView.init()
-        spinner.center = self.view.center
-        spinner.style = RTSpinKitViewStyle.styleCircle
-        self.spinner = spinner
-        view.addSubview(spinner)
-    }
-    
-    func stopSpinner() {
-        self.spinner?.removeFromSuperview()
-    }
 }
 
 extension FeedViewController: UserView {
     func setFeed(_ feeds: [Feed]) {
         self.feed = feeds
         self.collectionView.reloadData()
-        self.stopSpinner()
     }
     
     func showError(_ error : Error) {
