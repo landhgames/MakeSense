@@ -23,6 +23,7 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var titleBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var addedWishListBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var buyButtomBottomConstraint: NSLayoutConstraint!
     
     var feed : Feed?
     
@@ -33,7 +34,7 @@ class DetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setupUI(titleBottomPosition: -200, bottomConstraintPosition: -50)
+        setupUI(titleBottomPosition: -500, bottomConstraintPosition: -100)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -47,6 +48,7 @@ class DetailViewController: UIViewController {
         
         titleBottomConstraint.constant = titleBottomPosition
         addedWishListBottomConstraint.constant = bottomConstraintPosition
+        buyButtomBottomConstraint.constant = titleBottomPosition
         self.view.layoutIfNeeded()
     }
     
@@ -71,9 +73,10 @@ class DetailViewController: UIViewController {
 
     func startViewAnimation(titleBottomPosition: CGFloat, listBottomPosition : CGFloat, scale : CGFloat) {
         self.titleBottomConstraint.constant = titleBottomPosition
+        self.buyButtomBottomConstraint.constant = titleBottomPosition
         self.addedWishListBottomConstraint.constant = listBottomPosition
         
-        UIView.animate(withDuration: 0.5, delay:0, options: .curveLinear , animations: {
+        UIView.animate(withDuration: 0.4, delay:0, options: .curveLinear , animations: {
             self.view.layoutIfNeeded()
             self.closeButton.alpha =  1.0
             self.moreButton.alpha  =  1.0
