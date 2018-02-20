@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class Feed  {
     var feedType : FeedType?
@@ -29,5 +30,16 @@ class Feed  {
         self.image = image
         self.description = description
         self.price = price
-    }        
+    }
+    
+    convenience init(json: JSON) {
+        self.init()
+        feedType = FeedType(rawValue: json[attributes.feedType.rawValue].intValue)
+        title = json[attributes.title.rawValue].stringValue
+        leftSubtitle = json[attributes.leftSubtitle.rawValue].stringValue
+        rightSubtitle = json[attributes.rightSubtitle.rawValue].stringValue
+        image = json[attributes.image.rawValue].stringValue
+        description = json[attributes.description.rawValue].stringValue
+        price = json[attributes.price.rawValue].stringValue
+    }
 }

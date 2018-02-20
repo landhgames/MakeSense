@@ -18,13 +18,29 @@ class MainViewController: UIViewController {
     @IBOutlet weak var logInButton:         UIButton!
     @IBOutlet weak var alreadyHaveAccount:  UILabel!
     
+    
+    @IBOutlet weak var duracelImageConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var duracelSignLeftConstraint: NSLayoutConstraint!
+    @IBOutlet weak var duracelSignTopConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var thePowerSignTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var toForgetSignTopConstraint: NSLayoutConstraint!
+    
     // MARK: View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        
         startAnimation()
-        startDuracelTitleAnimation()
+        startDuracelTitleAnimation(completion: {
+            self.startDuracelTitlePositionAnimation(leftConstraintValue:-90.5, topConstraintValue: -303, scaleFactor:0.66, completion: {
+                self.startMessageAnimation(topContraintPosition:100, bottomContraintPosition:25, completion: {
+                    self.showButtonAndLabels(completion: nil)
+                })
+            })
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,45 +71,47 @@ class MainViewController: UIViewController {
     // MARK: Animations
     
     func startAnimation() {
-        UIView.animate(withDuration: 0.7, delay: 0.75, options: .curveEaseOut , animations: {
-            self.duracelImg.center.y -= self.view.bounds.width
+        duracelImageConstraint.constant = 0
+        UIView.animate(withDuration: 0.7, delay: 0.75, options: .curveLinear , animations: {
+            self.view.layoutIfNeeded()
             self.duracelImg.alpha = 0
         })
     }
     
-    func startDuracelTitleAnimation(){
+    func startDuracelTitleAnimation(completion: @escaping () -> Void){
         UIView.animate(withDuration: 0.7, delay: 1.0, options: .curveEaseOut , animations: {
-            var duracelLogoAlpha = self.duracelLogoImg.alpha
-            duracelLogoAlpha = 1
-            self.duracelLogoImg.alpha = duracelLogoAlpha
+            self.view.layoutIfNeeded()
+            self.duracelLogoImg.alpha = 1
             
         }, completion: { finished in
-          self.startDuracelTitlePositionAnimation()
+        completion()
         })
     }
     
-    func startDuracelTitlePositionAnimation(){
+    func startDuracelTitlePositionAnimation(leftConstraintValue: CGFloat, topConstraintValue : CGFloat, scaleFactor : CGFloat, completion: @escaping () -> Void){
+        duracelSignLeftConstraint.constant = leftConstraintValue
+        duracelSignTopConstraint.constant = topConstraintValue
         UIView.animate(withDuration: 1.5, delay: 1.0, options: .curveEaseOut , animations: {
-            self.duracelLogoImg.frame.origin.x = 0
-            self.duracelLogoImg.frame.origin.y = 50
-            self.duracelLogoImg.transform = CGAffineTransform(scaleX: 0.66, y: 0.66)
+            self.view.layoutIfNeeded()
+            self.duracelLogoImg.transform = CGAffineTransform(scaleX: scaleFactor, y: scaleFactor)
         }, completion: { finished in
-            self.startMessageAnimation()
+            completion()
         })
     }
     
-    func startMessageAnimation(){
+    func startMessageAnimation(topContraintPosition: CGFloat, bottomContraintPosition:CGFloat, completion: @escaping () -> Void){
+        thePowerSignTopConstraint.constant = topContraintPosition
+        toForgetSignTopConstraint.constant = bottomContraintPosition
         UIView.animate(withDuration: 0.35, delay: 0, options: .curveEaseOut , animations: {
-            self.thePowerImg.center.y +=    15
-            self.toForgetImage.center.y +=  15
-            self.thePowerImg.alpha =        1
-            self.toForgetImage.alpha =      1
+            self.view.layoutIfNeeded()
+            self.thePowerImg.alpha = 1
+            self.toForgetImage.alpha = 1
         }, completion: { finished in
-            self.showButtonAndLabels()
+            completion()
         })
     }
     
-    func showButtonAndLabels(){
+    func showButtonAndLabels(completion: (() -> Void)?){
         UIView.animate(withDuration: 0.7, delay: 0, options: .curveEaseOut , animations: {
         self.getStartedButton.alpha =    1
         self.alreadyHaveAccount.alpha =  1

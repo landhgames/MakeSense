@@ -27,8 +27,17 @@ class FeedViewPresenter  {
     
     func getFeeds() throws {
         do{
-            let feeds = try feedService.getFeeds()
-            self.userView?.setFeed(feeds)
+            try feedService.getFeeds() { (resultFeed, error) in
+                
+                if let error = error {
+                    //throw error
+                } else {
+                    if let result = resultFeed {
+                        self.userView?.setFeed(result.feed)
+                    }
+                }
+            }
+            
         }catch{
             throw error
         }

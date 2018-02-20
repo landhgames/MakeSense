@@ -10,11 +10,20 @@ import UIKit
 
 class FeedService: NSObject {
     
-    func getFeeds() throws -> [Feed] {
-
+    func getFeeds(completionHandler completion: @escaping (ResultFeed?,NSError?) -> Void) throws -> Void {
+        
         do {
-            let result = try MockNetworkService.getFeed()
-            return result
+            NetworkService.getFeedRequest(getFeedUrl:Urls.getFeedUrl.rawValue) { (json, error) in
+                if (json != nil) {
+                    let responseFeed = ResultFeed.create(json: json!)
+                    completion(responseFeed, nil)
+                }
+                else {
+                    completion(nil, error)
+                }
+            }
+            //let result = try MockNetworkService.getFeed()
+            
         }catch{
             print("Error retrieving feeds")
             throw error
