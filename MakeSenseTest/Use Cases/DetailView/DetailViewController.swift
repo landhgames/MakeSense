@@ -21,36 +21,38 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var closeButton:         UIButton!
     @IBOutlet weak var moreButton:          UIButton!
     
+    @IBOutlet weak var titleBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var addedWishListBottomConstraint: NSLayoutConstraint!
+    
     var feed : Feed?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setupUI()
         startViewAnimation()
         updateUI()
     }
     
     func setupUI() {
-        titleLabel.center.y -=          view.bounds.height
-        priceLabel.center.y -=          view.bounds.width
-        descriptionLabel.center.y -=    view.bounds.width
-        addToWishListButton.center.y -= view.bounds.width
-        buyOnlinebutton.center.y -=     view.bounds.width
-        separatorView.center.y -=       view.bounds.width
-        wishListIcon.alpha =            0
-        closeButton.alpha =             0
-        moreButton.alpha =              0
+        wishListIcon.alpha = 0
+        closeButton.alpha = 0
+        moreButton.alpha =  0
+        
+        titleBottomConstraint.constant = 0
+        addedWishListBottomConstraint.constant = -50
+        self.view.layoutIfNeeded()
     }
     
     func updateUI() {
         if let feed = self.feed {
-                titleLabel.text = feed.title
-                priceLabel.text = feed.price
-                itemImage.image = UIImage.init(named: feed.image)        
+            titleLabel.text = feed.title
+            priceLabel.text = feed.price
+            itemImage.image = UIImage.init(named: feed.image)
         }
     }
 
@@ -66,17 +68,13 @@ class DetailViewController: UIViewController {
     // MARK: Animations
 
     func startViewAnimation() {
-        UIView.animate(withDuration: 0.5, delay: 0, options: .curveLinear , animations: {
-            self.titleLabel.center.y -=         self.view.bounds.width
-            self.priceLabel.center.y -=         self.view.bounds.width
-            self.descriptionLabel.center.y -=   self.view.bounds.width
-            self.addToWishListButton.center.y -= self.view.bounds.width
-            self.buyOnlinebutton.center.y -=    self.view.bounds.width
-            self.separatorView.center.y -=      self.view.bounds.width
-
+        titleBottomConstraint.constant = 242
+        addedWishListBottomConstraint.constant = 12
+        
+        UIView.animate(withDuration: 0.5, delay:0, options: .curveLinear , animations: {
+            self.view.layoutIfNeeded()
             self.closeButton.alpha =  1.0
             self.moreButton.alpha  =  1.0
-            
             self.itemImage.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
         })
     }
@@ -85,7 +83,7 @@ class DetailViewController: UIViewController {
     // MARK: IBActions
     
     @IBAction func didPressDismissViewController(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: false)
+        dismiss(animated:true,completion:nil)
     }
     
     @IBAction func didPressAddToWithList(_ sender: UIButton) {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SpinKit
 
 class FeedViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -17,9 +18,12 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     fileprivate let feedViewPresenter = FeedViewPresenter(feedService: FeedService())
     fileprivate var feed = [Feed]()
+    var spinner : RTSpinKitView?
+    let transition = MakeSenseAnimationTransition()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        startSpinner()
         
         let nibName = UINib(nibName: attributes.specialAddCell.rawValue, bundle:nil)
         collectionView.register(nibName, forCellWithReuseIdentifier: attributes.specialAddCell.rawValue)
@@ -41,6 +45,8 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
             Utils.showErrorWithMsg(Constants.errorLoadUsers, viewController: self)
         }
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -103,7 +109,8 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
         if feed.feedType == FeedType.SmallAdd || feed.feedType == FeedType.RichAdd {
             let detailViewController = storyboard?.instantiateViewController(withIdentifier: attributes.DetailViewController.rawValue) as! DetailViewController
             detailViewController.feed = feed
-            navigationController?.pushViewController(detailViewController, animated: false)
+            detailViewController.transitioningDelegate = self
+            present(detailViewController, animated: true, completion: nil)
         }
     }
     
@@ -144,11 +151,38 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
             self.view.layoutIfNeeded()
         })
     }
+    
+    // Spinner
+    
+    func startSpinner() {
+        let spinner = RTSpinKitView.init()
+        spinner.center = self.view.center
+        spinner.style = RTSpinKitViewStyle.styleCircle
+        self.spinner = spinner
+        view.addSubview(spinner)
+    }
+    
+    func stopSpinner() {
+        self.spinner?.removeFromSuperview()
+    }
 }
 
 extension FeedViewController: UserView {
     func setFeed(_ feeds: [Feed]) {
         self.feed = feeds
+        self.collectionView.reloadData()
+        self.stopSpinner()
+    }
+}
+
+extension FeedViewController : UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return self.transition
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return self.transition
     }
 }
 
