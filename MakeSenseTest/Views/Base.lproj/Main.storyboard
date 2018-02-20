@@ -146,7 +146,7 @@
                                         <state key="normal" image="iconFilter"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boston University Feed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1F1-0Z-2MH">
-                                        <rect key="frame" x="68" y="33" width="239" height="20"/>
+                                        <rect key="frame" x="99" y="33" width="177" height="20"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -166,8 +166,6 @@
                                     <constraint firstItem="4O6-Pf-bld" firstAttribute="centerY" secondItem="U8D-UM-QVm" secondAttribute="centerY" constant="8" id="Ful-ni-BBW"/>
                                     <constraint firstItem="4O6-Pf-bld" firstAttribute="top" secondItem="y1n-8y-rEb" secondAttribute="top" id="Uxp-00-63K"/>
                                     <constraint firstAttribute="trailing" secondItem="y1n-8y-rEb" secondAttribute="trailing" constant="10" id="glO-rf-EER"/>
-                                    <constraint firstItem="1F1-0Z-2MH" firstAttribute="leading" secondItem="4O6-Pf-bld" secondAttribute="trailing" constant="-9" id="os1-Nq-F8F"/>
-                                    <constraint firstItem="y1n-8y-rEb" firstAttribute="leading" secondItem="1F1-0Z-2MH" secondAttribute="trailing" constant="17" id="se9-5X-VaI"/>
                                     <constraint firstItem="4O6-Pf-bld" firstAttribute="top" secondItem="U8D-UM-QVm" secondAttribute="top" constant="33" id="xn3-aO-PL1"/>
                                 </constraints>
                             </view>
@@ -256,10 +254,9 @@
                                 <rect key="frame" x="0.0" y="361" width="375" height="306"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 400" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqe-Tf-Wjg">
-                                        <rect key="frame" x="15" y="65" width="112" height="32"/>
+                                        <rect key="frame" x="15" y="65" width="350" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="NHQ-WO-aGv"/>
-                                            <constraint firstAttribute="width" constant="112" id="Vgm-L2-Do0"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
                                         <nil key="textColor"/>
@@ -326,6 +323,7 @@
                                     <constraint firstAttribute="trailing" secondItem="ji1-Oc-Cq4" secondAttribute="trailing" constant="10" id="O5Y-zu-s8p"/>
                                     <constraint firstItem="yqe-Tf-Wjg" firstAttribute="top" secondItem="ji1-Oc-Cq4" secondAttribute="bottom" constant="10" id="Opm-mn-WlH"/>
                                     <constraint firstItem="i08-Hn-XIl" firstAttribute="leading" secondItem="FdP-XR-7YG" secondAttribute="leading" id="Pi4-ZT-5ma"/>
+                                    <constraint firstAttribute="trailing" secondItem="yqe-Tf-Wjg" secondAttribute="trailing" constant="10" id="QhM-sQ-sco"/>
                                     <constraint firstItem="ji1-Oc-Cq4" firstAttribute="top" secondItem="Hfu-Cp-s18" secondAttribute="bottom" constant="2" id="Rmm-4V-UoF"/>
                                     <constraint firstItem="Hfu-Cp-s18" firstAttribute="top" secondItem="FdP-XR-7YG" secondAttribute="top" id="TsN-vq-dOU"/>
                                     <constraint firstItem="yqe-Tf-Wjg" firstAttribute="leading" secondItem="FdP-XR-7YG" secondAttribute="leading" constant="15" id="Wtq-he-GT2"/>
