@@ -13,8 +13,7 @@ class MakeSenseAnimationTransition: NSObject, UIViewControllerAnimatedTransition
     let duration = 0.5
     var presenting = true
     var originFrame = CGRect.zero
-    
-    
+        
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return duration
     }
@@ -28,10 +27,8 @@ class MakeSenseAnimationTransition: NSObject, UIViewControllerAnimatedTransition
         UIView.animate(withDuration: duration,
                        animations: {
                         toView.alpha = 1.0
-        },
-                       completion: { _ in
-                        transitionContext.completeTransition(true)
-        }
-        )
+        },completion: { _ in
+            transitionContext.completeTransition(true)
+        })
     }
 }
