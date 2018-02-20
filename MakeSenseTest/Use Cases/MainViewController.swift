@@ -16,14 +16,11 @@ class MainViewController: UIViewController {
     @IBOutlet weak var toForgetImage:       UIImageView!
     @IBOutlet weak var getStartedButton:    UIButton!
     @IBOutlet weak var logInButton:         UIButton!
-    @IBOutlet weak var alreadyHaveAccount:  UILabel!
-    
+    @IBOutlet weak var alreadyHaveAccount:  UILabel!    
     
     @IBOutlet weak var duracelImageConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var duracelSignLeftConstraint: NSLayoutConstraint!
     @IBOutlet weak var duracelSignTopConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var thePowerSignTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var toForgetSignTopConstraint: NSLayoutConstraint!
     
@@ -35,7 +32,7 @@ class MainViewController: UIViewController {
         
         startAnimation()
         startDuracelTitleAnimation(completion: {
-            self.startDuracelTitlePositionAnimation(leftConstraintValue:-90.5, topConstraintValue: -303, scaleFactor:0.66, completion: {
+            self.startDuracelTitlePositionAnimation(leftConstraintValue:-5, topConstraintValue: 40, scaleFactor:0.66, completion: {
                 self.startMessageAnimation(topContraintPosition:100, bottomContraintPosition:25, completion: {
                     self.showButtonAndLabels(completion: nil)
                 })
@@ -59,9 +56,6 @@ class MainViewController: UIViewController {
         self.getStartedButton.alpha =   0
         self.logInButton.alpha =        0
         self.alreadyHaveAccount.alpha = 0
-        self.duracelImg.center = self.view.center
-        self.thePowerImg.center.y -=    15
-        self.toForgetImage.center.y -= 15
     }
     
     override var prefersStatusBarHidden: Bool {

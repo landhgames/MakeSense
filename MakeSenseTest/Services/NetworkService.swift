@@ -27,7 +27,6 @@ class NetworkService: NSObject {
                 let json = JSON(value as Any)
                 completion(json, nil)
             }
-        })
-        
+        })    
     }
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 class Constants  {
-    static let errorLoadUsers =   NSLocalizedString("Something went wrong, could not load feed!", comment: "")
+    static let errorLoadUsers =   NSLocalizedString("Could not load feed! Please, try again later..", comment: "")
     static let errorTitle =       NSLocalizedString("Oops! Somethig is wrong..", comment: "")
     static let ok =               NSLocalizedString("Ok", comment: "")
 }
@@ -43,17 +43,17 @@ public enum FeedType : Int{
     case SpecialAdd = 0
     case RichAdd
     case BannerAdd
-    case SmallAdd //3
+    case SmallAdd
 }
 
 protocol UserView: NSObjectProtocol {
     func setFeed(_ feeds: [Feed])
+    func showError(_ error : Error )
 }
 
 protocol CellProtocol {
     func configureCell(_ feed : Feed)
 }
-
 
 public enum Urls: String {
     case getFeedUrl =        "http://demo7630548.mockable.io/getFeed"

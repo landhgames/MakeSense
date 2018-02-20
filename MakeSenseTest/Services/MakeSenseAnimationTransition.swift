@@ -10,7 +10,7 @@ import UIKit
 
 class MakeSenseAnimationTransition: NSObject, UIViewControllerAnimatedTransitioning {
     
-    let duration = 1.0
+    let duration = 0.5
     var presenting = true
     var originFrame = CGRect.zero
     
