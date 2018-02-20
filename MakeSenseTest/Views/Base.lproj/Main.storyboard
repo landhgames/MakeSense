@@ -337,6 +337,7 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addToWishListButton" destination="ZuG-NV-9Wx" id="Z72-i0-7fb"/>
+                        <outlet property="addedWishListBottomConstraint" destination="vc0-Tb-q7B" id="Ljl-OC-Vku"/>
                         <outlet property="buyOnlinebutton" destination="j3n-12-tkQ" id="oLt-KL-BEx"/>
                         <outlet property="closeButton" destination="ibw-o3-6vM" id="n6P-3L-5A5"/>
                         <outlet property="descriptionLabel" destination="fg1-am-ZYy" id="sqi-9H-tqc"/>
@@ -344,8 +345,8 @@
                         <outlet property="moreButton" destination="lrW-BB-bYx" id="MM8-1N-zhk"/>
                         <outlet property="priceLabel" destination="DxA-mZ-4mG" id="ecx-d6-PXb"/>
                         <outlet property="separatorView" destination="XHE-dC-tUp" id="Sbu-zv-q5U"/>
+                        <outlet property="titleBottomConstraint" destination="TjC-Pi-tsL" id="9ll-KQ-y6g"/>
                         <outlet property="titleLabel" destination="1dK-vZ-lC3" id="z6P-X4-ZNY"/>
-                        <outlet property="titleTopConstraint" destination="tVK-gA-bLG" id="xrT-Lu-WEO"/>
                         <outlet property="wishListIcon" destination="Em5-qr-a1a" id="Ux3-XW-mX1"/>
                     </connections>
                 </viewController>
