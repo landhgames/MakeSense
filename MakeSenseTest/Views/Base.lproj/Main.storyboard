@@ -30,7 +30,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="avq-Ow-zdM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="avq-Ow-zdM">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_duracell" translatesAutoresizingMaskIntoConstraints="NO" id="qBi-1x-QU1">
@@ -86,6 +86,7 @@
                         <constraints>
                             <constraint firstItem="exe-jM-vdj" firstAttribute="leading" secondItem="F7f-1h-ATj" secondAttribute="leading" id="1yI-BD-Xcg"/>
                             <constraint firstItem="Zct-Mb-sA0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="75" id="2V3-qq-smC"/>
+                            <constraint firstItem="avq-Ow-zdM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5V8-6s-xSL"/>
                             <constraint firstItem="avq-Ow-zdM" firstAttribute="centerX" secondItem="CaF-eU-VWI" secondAttribute="centerX" id="7lU-31-mD1"/>
                             <constraint firstAttribute="trailing" secondItem="avq-Ow-zdM" secondAttribute="trailing" id="Cxu-P5-Ob2"/>
                             <constraint firstItem="CaF-eU-VWI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="Eel-tx-s1G"/>
